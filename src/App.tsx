@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import styles from "./App.module.sass";
+
 import { GameList } from "./data/gameList";
 import { IGame } from "./types/game";
 
