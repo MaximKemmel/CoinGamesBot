@@ -9,6 +9,9 @@ import CityHolderGameIcon from "../assets/city_holder_game.jpg";
 import CatizenMantleIcon from "../assets/catizen_mantle.jpg";
 import CatizenTonIcon from "../assets/catizen_mantle.jpg";
 import MemeFiIcon from "../assets/meme_fi.jpg";
+import PocketFiIcon from "../assets/pocket_fi.jpg";
+import FuelJettonIcon from "../assets/fuel_jetton.jpg";
+import BodyPumpIcon from "../assets/body_pump.jpg";
 
 export const GameList = [
   {
@@ -73,6 +76,27 @@ export const GameList = [
     name: "MemeFi",
     url: "https://t.me/memefi_coin_bot?start=r_4255932e2e",
     icon: MemeFiIcon,
+    show_description: false,
+  } as IGame,
+  {
+    id: 9,
+    name: "PocketFi",
+    url: "https://t.me/pocketfi_bot/Mining?startapp=ref-406006297-alliance-cryptanci",
+    icon: PocketFiIcon,
+    show_description: false,
+  } as IGame,
+  {
+    id: 10,
+    name: "FuelvJetton",
+    url: "https://t.me/fueljetton_bot/app?startapp=406006297",
+    icon: FuelJettonIcon,
+    show_description: false,
+  } as IGame,
+  {
+    id: 11,
+    name: "Body Pump",
+    url: "https://t.me/Bodypump_app_bot?start=4c6135d3-5dd6-433b-87be-09143d14d430",
+    icon: BodyPumpIcon,
     show_description: false,
   } as IGame,
 ] as IGame[];
