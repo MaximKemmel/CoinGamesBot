@@ -16,7 +16,7 @@ export const GameList = [
   {
     id: 1,
     name: "Cat Gold Miner",
-    url: "https://t.me/catgoldminerbot?start=406006297",
+    url: "https://t.me/catgoldminerbot?startapp=406006297",
     icon: CatGoldMinerIcon,
   } as IGame,
   {
