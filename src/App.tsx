@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import styles from "./App.module.sass";
 
-import { GameList } from "./data/gameList";
+import { GameList } from "./data/gamesList";
 import { IGame } from "./types/game";
 
 import JoystickIcon from "./assets/joystick.png";
