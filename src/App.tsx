@@ -11,7 +11,7 @@ function App() {
   const navigate = useNavigate();
 
   telegram.BackButton.onClick(() => {
-    navigate("/");
+    navigate(-1);
   });
 
   useEffect(() => {
