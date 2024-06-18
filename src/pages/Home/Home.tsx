@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import styles from "./Home.module.sass";
@@ -12,7 +12,6 @@ import InfoIcon from "../../assets/information.png";
 const telegram = window.Telegram.WebApp;
 
 const Home = () => {
-  const [selectedGame, setSelectedGame] = useState({ id: -1 } as IGame);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -20,19 +19,6 @@ const Home = () => {
     telegram.expand();
     telegram.setHeaderColor("#2C2D3F");
   }, []);
-
-  useEffect(() => {
-    if (selectedGame.id === -1) {
-      if (telegram.BackButton.isVisible) {
-        telegram.BackButton.hide();
-      }
-    } else {
-      navigate(selectedGame.description_url);
-      if (!telegram.BackButton.isVisible) {
-        telegram.BackButton.show();
-      }
-    }
-  }, [selectedGame]);
 
   return (
     <div className={styles.main}>
@@ -43,7 +29,7 @@ const Home = () => {
             <div className={styles.name}>{game.name}</div>
             <div className={styles.buttons}>
               {game.show_description ? (
-                <button onClick={() => setSelectedGame(game)}>
+                <button onClick={() => navigate(game.description_url)}>
                   <img src={InfoIcon} alt="" />
                 </button>
               ) : null}
