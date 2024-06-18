@@ -4,6 +4,8 @@ import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import HamsterKombat from "./pages/HamsterKombat/HamsterKombat";
 
+import "./App.module.sass";
+
 const telegram = window.Telegram.WebApp;
 
 function App() {

@@ -1,1 +1,28 @@
+$active_color: #A7CC48
+$button_color: #FFFFFF20
 
+.main
+    .tab_container
+        display: flex
+        padding: 10px
+        flex-direction: column
+        gap: 10px
+
+        .tabs_list
+            display: flex
+            justify-content: space-between
+
+            .tab
+                display: flex
+                align-items: center
+                justify-content: center
+                height: 40px
+                text-align: center
+                border-radius: 5px
+                width: 30%
+
+                &:active
+                    background-color: $button_color
+
+                &.active
+                    color: $active_color
