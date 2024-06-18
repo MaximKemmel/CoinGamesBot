@@ -18,7 +18,11 @@ const HamsterKombat = () => {
             Шифр
           </div>
         </div>
-        <div className={styles.tabs_contents}></div>
+        <div className={styles.tabs_contents}>
+          <div className={`${styles.content} ${selectedTab === 0 ? styles.active : ""}`}>5445</div>
+          <div className={`${styles.content} ${selectedTab === 1 ? styles.active : ""}`}>654646</div>
+          <div className={`${styles.content} ${selectedTab === 2 ? styles.active : ""}`}>878</div>
+        </div>
       </div>
     </div>
   );

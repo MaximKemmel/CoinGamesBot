@@ -7,7 +7,7 @@ $card_color: #383957
         display: flex
         padding: 10px
         flex-direction: column
-        gap: 10px
+        gap: 15px
 
         .tabs_list
             display: flex
@@ -15,6 +15,7 @@ $card_color: #383957
             background-color: $card_color
             border-radius: 5px
             padding: 5px
+            flex-shrink: 0
 
             .tab
                 display: flex
@@ -24,7 +25,7 @@ $card_color: #383957
                 text-align: center
                 border-radius: 5px
                 width: calc(100% / 3 - 5px)
-                font-size: 13px
+                font-size: 14px
                 transition: all .2s ease-out
 
                 &:active
@@ -34,3 +35,13 @@ $card_color: #383957
                     color: $active_color
                     font-weight: 500
                     background-color: $button_color
+
+        .tabs_contents
+            flex-grow: 1
+            display: flex
+
+            .content
+                display: none
+
+                &.active
+                    display: flex
