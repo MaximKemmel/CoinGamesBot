@@ -1,7 +1,8 @@
 $main_color: #2C2D3F
 $text_color: #E9F4FF
 $card_color: #383957
-$button_color: #A7CC48
+$icon_color: #A7CC48
+$button_color: #FFFFFF20
 
 *
     padding: 0
@@ -38,10 +39,18 @@ body
                 height: 40px
                 border-radius: 5px
 
-            button
-                background-color: $button_color
-                height: 40px
-                width: 40px
-                border: none
-                border-radius: 5px
-                color: $text_color
+            .buttons
+                display: flex
+                gap: 5px
+
+                button
+                    background-color: $card_color
+                    height: 40px
+                    width: 40px
+                    border: none
+                    border-radius: 5px
+                    color: $text_color
+
+                    img
+                        height: auto
+                        width: 25px

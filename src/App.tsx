@@ -6,6 +6,9 @@ import styles from "./App.module.sass";
 import { GameList } from "./data/gameList";
 import { IGame } from "./types/game";
 
+import JoystickIcon from "./assets/joystick.png";
+import InfoIcon from "./assets/information.png";
+
 const telegram = window.Telegram.WebApp;
 
 function App() {
@@ -22,9 +25,16 @@ function App() {
           <div className={styles.game}>
             <img src={game.icon} alt="" />
             <div className={styles.name}>{game.name}</div>
-            <Link to={game.url}>
-              <button>ff</button>
-            </Link>
+            <div className={styles.buttons}>
+              <button>
+                <img src={InfoIcon} alt="" />
+              </button>
+              <Link to={game.url}>
+                <button>
+                  <img src={JoystickIcon} alt="" />
+                </button>
+              </Link>
+            </div>
           </div>
         ))}
       </div>
