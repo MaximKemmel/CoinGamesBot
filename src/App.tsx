@@ -12,6 +12,7 @@ function App() {
   useEffect(() => {
     telegram.ready();
     telegram.expand();
+    telegram.BackButton.show();
   }, []);
 
   return (
