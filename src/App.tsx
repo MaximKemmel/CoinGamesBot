@@ -9,7 +9,6 @@ const telegram = window.Telegram.WebApp;
 function App() {
   useEffect(() => {
     telegram.ready();
-    telegram.isExpanded = true;
   }, []);
 
   return (
