@@ -5,6 +5,10 @@ import CatGoldMinerIcon from "../assets/cat_gold_miner.jpg";
 import BlumIcon from "../assets/blum.jpg";
 import VertusIcon from "../assets/vertus.jpg";
 import BcoinIcon from "../assets/bcoin2048.jpg";
+import CityHolderGameIcon from "../assets/city_holder_game.jpg";
+import CatizenMantleIcon from "../assets/catizen_mantle.jpg";
+import CatizenTonIcon from "../assets/catizen_mantle.jpg";
+import MemeFiIcon from "../assets/meme_fi.jpg";
 
 export const GameList = [
   {
@@ -41,6 +45,34 @@ export const GameList = [
     name: "Bcoin 2048",
     url: "https://t.me/Bcoin2048bot/app?startapp=ref_pCH7Qj5YUGFV6b36B7tcRwkE",
     icon: BcoinIcon,
+    show_description: false,
+  } as IGame,
+  {
+    id: 5,
+    name: "City Holder Game",
+    url: "https://t.me/cityholder?start=kemdeco",
+    icon: CityHolderGameIcon,
+    show_description: false,
+  } as IGame,
+  {
+    id: 6,
+    name: "Catizen Mantle",
+    url: "https://t.me/Catizen_Mntbot/gameapp?startapp=r_3093_22018399",
+    icon: CatizenMantleIcon,
+    show_description: false,
+  } as IGame,
+  {
+    id: 7,
+    name: "Catizen TON",
+    url: "https://t.me/catizenbot/gameapp?startapp=r_3093_17847050",
+    icon: CatizenTonIcon,
+    show_description: false,
+  } as IGame,
+  {
+    id: 8,
+    name: "MemeFi",
+    url: "https://t.me/memefi_coin_bot?start=r_4255932e2e",
+    icon: MemeFiIcon,
     show_description: false,
   } as IGame,
 ] as IGame[];
