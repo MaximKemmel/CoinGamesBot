@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+
 import styles from "./App.module.sass";
 
 import { GameList } from "./data/gameList";
@@ -19,6 +21,9 @@ function App() {
           <div className={styles.game}>
             <img src={game.icon} alt="" />
             <div className={styles.name}>{game.name}</div>
+            <Link to={game.url}>
+              <button>ff</button>
+            </Link>
           </div>
         ))}
       </div>

@@ -1,11 +1,17 @@
+$main_color: #162438
+$text_color: #E9F4FF
+$card_color: #284368
+$button_color: #FF9123
+
 *
     padding: 0
     margin: 0
     box-sizing: border-box
+    font-family: 'Montserrat', sans-serif
 
 body
-    background: var(--tg-theme-bg-color)
-    color: var(--tg-theme-text-color)
+    background: $main_color
+    color: $text_color
 
 .main
     .game_list
@@ -19,13 +25,23 @@ body
             align-items: center
             gap: 10px
             padding: 5px
-            background: #00000020
+            background: $card_color
             border-radius: 8px
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25)
 
             .name
                 flex-grow: 1
+                font-size: 13px
 
             img
                 width: 35px
                 height: 35px
+                border-radius: 5px
+
+            button
+                background-color: $button_color
+                height: 35px
+                width: 35px
+                filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.25))
+                border: none
                 border-radius: 5px
