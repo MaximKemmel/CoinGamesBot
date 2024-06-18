@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     telegram.ready();
     telegram.expand();
-    telegram.BackButton.show();
+    telegram.setHeaderColor("2C2D3F");
   }, []);
 
   return (
