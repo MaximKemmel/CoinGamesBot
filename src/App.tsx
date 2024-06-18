@@ -31,7 +31,7 @@ function App() {
               </button>
               <Link to={game.url}>
                 <button>
-                  <img src={JoystickIcon} alt="" />
+                  <img className={styles.joystick} src={JoystickIcon} alt="" />
                 </button>
               </Link>
             </div>
