@@ -1,5 +1,6 @@
 $active_color: #A7CC48
 $button_color: #FFFFFF20
+$card_color: #383957
 
 .main
     .tab_container
@@ -11,6 +12,9 @@ $button_color: #FFFFFF20
         .tabs_list
             display: flex
             justify-content: space-between
+            background-color: $card_color
+            border-radius: 5px
+            padding: 5px
 
             .tab
                 display: flex
@@ -19,10 +23,14 @@ $button_color: #FFFFFF20
                 height: 40px
                 text-align: center
                 border-radius: 5px
-                width: 30%
+                width: calc(100% / 3 - 5px)
+                font-size: 13px
+                transition: all .2s ease-out
 
                 &:active
                     background-color: $button_color
 
                 &.active
                     color: $active_color
+                    font-weight: 500
+                    background-color: $button_color

@@ -9,10 +9,10 @@ const HamsterKombat = () => {
       <div className={styles.tab_container}>
         <div className={styles.tabs_list}>
           <div className={`${styles.tab} ${selectedTab === 0 ? styles.active : ""}`} onClick={() => setSelectedTab(0)}>
-            Общая информация
+            О проекте
           </div>
           <div className={`${styles.tab} ${selectedTab === 1 ? styles.active : ""}`} onClick={() => setSelectedTab(1)}>
-            Комбо-карточки
+            Комбо
           </div>
           <div className={`${styles.tab} ${selectedTab === 2 ? styles.active : ""}`} onClick={() => setSelectedTab(2)}>
             Шифр
