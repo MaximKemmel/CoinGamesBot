@@ -87,7 +87,7 @@ export const GameList = [
   } as IGame,
   {
     id: 10,
-    name: "FuelvJetton",
+    name: "Fuel Jetton",
     url: "https://t.me/fueljetton_bot/app?startapp=406006297",
     icon: FuelJettonIcon,
     show_description: false,
