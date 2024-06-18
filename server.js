@@ -41,20 +41,8 @@ var bot = new TelegramBot(token, { polling: true });
 bot.on("message", function (msg) { return __awaiter(_this, void 0, void 0, function () {
     var chatId, text;
     return __generator(this, function (_a) {
-        switch (_a.label) {
-            case 0:
-                chatId = msg.chat.id;
-                text = msg.text;
-                if (!(text === "/start")) return [3 /*break*/, 2];
-                return [4 /*yield*/, bot.sendMessage(chatId, "Сообщение", {
-                        reply_markup: {
-                            keyboard: [[{ text: "Кнопка" }]],
-                        },
-                    })];
-            case 1:
-                _a.sent();
-                _a.label = 2;
-            case 2: return [2 /*return*/];
-        }
+        chatId = msg.chat.id;
+        text = msg.text;
+        return [2 /*return*/];
     });
 }); });
