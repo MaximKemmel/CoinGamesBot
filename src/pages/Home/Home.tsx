@@ -12,8 +12,34 @@ import { Information as InfoIcon } from "../../assets/svg/Information";
 const Home = () => {
   const navigate = useNavigate();
 
+  function ensureDocumentIsScrollable() {
+    const isScrollable = document.documentElement.scrollHeight > window.innerHeight;
+    // Check if the document is scrollable
+    if (!isScrollable) {
+      /*
+      Set the document's height to 100 % of
+      the viewport height plus one extra pixel
+      to make it scrollable.
+      */
+      document.documentElement.style.setProperty("height", "calc(100vh + 1px)", "important");
+    }
+  }
+
+  // Call ensureDocumentIsScrollable function when the entire page has loaded.
+  window.addEventListener("load", ensureDocumentIsScrollable);
+
+  function preventCollapse(_event) {
+    if (window.scrollY === 0) {
+      window.scrollTo(0, 1);
+    }
+  }
+
+  // Attach the above function to the touchstart event handler of the scrollable element
+  const scrollableElement = document.querySelector(".main");
+  scrollableElement?.addEventListener("touchstart", preventCollapse);
+
   return (
-    <div className={styles.main}>
+    <div className={`${styles.main} main`}>
       <div className={styles.title}>Список игр</div>
       <div className={styles.game_list}>
         {GameList.map((game: IGame, index: number) => (
