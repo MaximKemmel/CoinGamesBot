@@ -43,16 +43,16 @@ const HamsterKombat = () => {
             </div>
             <div className={styles.row}>
               <div className={styles.code_letter}>
-                D<span>- • •</span>
+                D<span>-••</span>
               </div>
               <div className={styles.code_letter}>
-                A<span>• -</span>
+                A<span>•-</span>
               </div>
               <div className={styles.code_letter}>
-                P<span>• - - •</span>
+                P<span>•--•</span>
               </div>
               <div className={styles.code_letter}>
-                P<span>• - - •</span>
+                P<span>•--•</span>
               </div>
             </div>
           </div>
