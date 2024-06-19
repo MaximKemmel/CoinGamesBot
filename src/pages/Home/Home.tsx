@@ -5,8 +5,8 @@ import styles from "./Home.module.sass";
 import { GameList } from "../../data/gamesList";
 import { IGame } from "../../types/game";
 
-import JoystickIcon from "../../assets/joystick.png";
-import InfoIcon from "../../assets/information.png";
+import { Joystick as JoystickIcon } from "../../assets/svg/Joystick";
+import { Information as InfoIcon } from "../../assets/svg/Information";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -22,12 +22,12 @@ const Home = () => {
             <div className={styles.buttons}>
               {game.show_description ? (
                 <button className={styles.info} onClick={() => navigate(game.description_url)}>
-                  <img src={InfoIcon} alt="" />
+                  <InfoIcon />
                 </button>
               ) : null}
               <Link to={game.url}>
                 <button className={styles.play}>
-                  <img src={JoystickIcon} alt="" />
+                  <JoystickIcon />
                 </button>
               </Link>
             </div>
