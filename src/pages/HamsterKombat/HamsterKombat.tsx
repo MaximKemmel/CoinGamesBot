@@ -7,6 +7,7 @@ import "../../App.module.sass";
 import HamsterKombatIcon from "../../assets/hamster_kombat.jpg";
 import { Joystick as JoystickIcon } from "../../assets/svg/Joystick";
 import { Search as SearchIcon } from "../../assets/svg/Search";
+import { Wallet as WalletIcon } from "../../assets/svg/Wallet";
 
 const HamsterKombat = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -54,6 +55,20 @@ const HamsterKombat = () => {
               <div className={styles.code_letter}>
                 P<span>•--•</span>
               </div>
+            </div>
+            <div className={`${styles.row} ${styles.vertical}`}>
+              Расшифровка:
+              <div className={`${styles.row} ${styles.code_description}`}>
+                <span>•</span>(точка) - это быстрый тап
+              </div>
+              <div className={`${styles.row} ${styles.code_description}`}>
+                <span>-</span>(тире) - это долгий тап (~2 сек)
+              </div>
+            </div>
+
+            <div className={styles.row}>
+              <WalletIcon />
+              Получаемая награда = <span>1 000 000</span>
             </div>
           </div>
         </div>

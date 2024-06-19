@@ -117,14 +117,19 @@ a
                 .row
                     display: flex
                     align-items: center
-                    gap: 15px
+                    gap: 10px
                     font-size: 15px
                     flex-wrap: wrap
                     width: 100%
 
+                    &.vertical
+                        align-items: start
+                        flex-direction: column
+
                     &.code
                         gap: 5px
                         justify-content: center
+                        margin: 5px 0
 
                     svg
                         width: 25px
@@ -133,7 +138,7 @@ a
                     span
                         font-weight: 700
                         color: $active_color
-                        margin-left: -10px
+                        margin-left: -5px
 
                     .code_letter
                         padding-top: 5px
@@ -153,4 +158,9 @@ a
                         span
                             font-size: 22px
                             margin-left: 0px
+                            letter-spacing: 0.1em
+
+                    &.code_description
+                        span
+                            font-size: 22px
                             letter-spacing: 0.1em
