@@ -57,10 +57,10 @@ const HamsterKombat = () => {
               </div>
             </div>
             <div className={`${styles.row} ${styles.vertical}`}>
-              Расшифровка:
               <div className={styles.row}>
                 Чтобы активировать режим, нажмите на <span>"Прибыль за тап"</span> быстро 3 раза
               </div>
+              Расшифровка:
               <div className={`${styles.row} ${styles.code_description}`}>
                 <span>•</span>(точка) - это быстрый тап
               </div>
