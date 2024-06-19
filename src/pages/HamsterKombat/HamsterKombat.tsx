@@ -40,26 +40,24 @@ const HamsterKombat = () => {
           <div className={`${styles.content} ${selectedTab === 2 ? styles.active : ""}`}>
             <div className={styles.row}>
               <SearchIcon />
-              Новый шифр = <span>DAPP</span>
+              Новый шифр = <span>FORK</span>
             </div>
             <div className={`${styles.row} ${styles.code}`}>
               <div className={styles.code_letter}>
-                <div className={styles.position}>1</div>D<span>-••</span>
+                <div className={styles.position}>1</div>F<span>••-•</span>
               </div>
               <div className={styles.code_letter}>
-                <div className={styles.position}>2</div>A<span>•-</span>
+                <div className={styles.position}>2</div>O<span>---</span>
               </div>
               <div className={styles.code_letter}>
-                <div className={styles.position}>3</div>P<span>•--•</span>
+                <div className={styles.position}>3</div>R<span>•-•</span>
               </div>
               <div className={styles.code_letter}>
-                <div className={styles.position}>4</div>P<span>•--•</span>
+                <div className={styles.position}>4</div>K<span>-•-</span>
               </div>
             </div>
             <div className={`${styles.row} ${styles.vertical}`}>
-              <div className={styles.row}>
-                Чтобы активировать режим, нажмите на <span>"Прибыль за тап"</span> быстро 3 раза
-              </div>
+              <div className={styles.row}>Чтобы активировать режим, нажмите на "Прибыль за тап" быстро 3 раза</div>
               Расшифровка:
               <div className={`${styles.row} ${styles.code_description}`}>
                 <span>•</span>(точка) - это быстрый тап
