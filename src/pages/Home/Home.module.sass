@@ -4,16 +4,14 @@ $active_color: #5DB434
 $info_button_hover: #E9F4FFAA
 $play_button_hover: #5DB434AA
 
-body
-    background: linear-gradient(179.98deg, #353759, #15173E)
-    color: $text_color
-    height: 100%
-
 .main
     display: flex
     flex-direction: column
     gap: 20px
     padding: 15px
+    padding-right: 0
+    overflow-y: hidden
+    height: 100vh
 
     .title
         font-weight: 500
@@ -22,18 +20,17 @@ body
     .game_list
         display: flex
         flex-direction: column
-        gap: 10px
-
-        .separator
-            height: 1px
-            width: 100%
-            background-color: $separator_color
+        overflow-y: auto
+        padding-right: 15px
 
         .game
             display: flex
             align-items: center
             gap: 10px
-            border-radius: 8px
+            padding: 10px 0
+
+            &.bordered
+                border-top: 1px solid $separator_color
 
             .name
                 flex-grow: 1
