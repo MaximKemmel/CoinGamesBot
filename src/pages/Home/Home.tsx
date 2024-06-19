@@ -12,30 +12,33 @@ import { Information as InfoIcon } from "../../assets/svg/Information";
 const Home = () => {
   const navigate = useNavigate();
 
-  window.addEventListener("load", ensureDocumentIsScrollable);
+  const num = 9999;
+  const scrollable = document.getElementById("main");
 
-  function ensureDocumentIsScrollable() {
-    const isScrollable = document.documentElement.scrollHeight > window.innerHeight;
-    // Check if the document is scrollable
-    if (!isScrollable) {
-      /*
-      Set the document's height to 100 % of
-      the viewport height plus one extra pixel
-      to make it scrollable.
-      */
-      document.documentElement.style.setProperty("height", "calc(100vh + 1px)", "important");
-    }
+  // The preventCollapse function should be called when the scrollable content scrollTop is not equal to zero.
+  function preventCollapse() {
+    document.documentElement.style.marginTop = num + "px";
+    document.documentElement.style.height = window.innerHeight + num + "px";
+    document.documentElement.style.overflow = "hidden";
+    window.scrollTo(0, num);
   }
 
-  function preventCollapse(_event) {
-    if (window.scrollY === 0) {
-      window.scrollTo(0, 1);
-    }
+  // The allowCollapse function should be called when the scrollable content is finished being touched.
+  // Do not use this function if you want to lock the mini app completely on scroll.
+  function allowCollapse() {
+    document.documentElement.style.marginTop = "auto";
+    document.documentElement.style.height = "auto";
+    document.documentElement.style.overflow = "auto";
   }
 
-  // Attach the above function to the touchstart event handler of the scrollable element
-  const scrollableElement = document.getElementById("main");
-  scrollableElement?.addEventListener("touchstart", preventCollapse);
+  document.body.addEventListener("touchstart", function () {
+    if (scrollable?.scrollTop !== 0) {
+      preventCollapse();
+    }
+  });
+  scrollable?.addEventListener("touchend", function () {
+    allowCollapse();
+  });
 
   return (
     <div className={styles.main} id="main">
