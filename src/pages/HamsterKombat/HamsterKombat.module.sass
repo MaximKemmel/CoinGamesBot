@@ -1,8 +1,8 @@
 $active_color: #5DB434
 $play_button_hover: #5DB434AA
-$button_color: #FFFFFF20
-$card_color: #383957
 $text_color: #E9F4FF
+$container_color: #313258
+$tab_color: #474871
 
 *
     font-family: 'Montserrat', sans-serif
@@ -47,7 +47,7 @@ a
         align-items: center
         justify-content: center
         gap: 10px
-        height: 35px
+        height: 40px
         width: 140px
         border: none
         border-radius: 5px
@@ -71,7 +71,7 @@ a
         .tabs_list
             display: flex
             justify-content: space-between
-            background-color: $card_color
+            background-color: $container_color
             border-radius: 5px
             padding: 5px
             flex-shrink: 0
@@ -88,12 +88,11 @@ a
                 transition: all .2s ease-out
 
                 &:active
-                    background-color: $button_color
+                    background-color: $tab_color
 
                 &.active
-                    color: $active_color
                     font-weight: 500
-                    background-color: $button_color
+                    background-color: $tab_color
 
         .tabs_contents
             flex-grow: 1
