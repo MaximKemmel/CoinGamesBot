@@ -12,16 +12,6 @@ import { Information as InfoIcon } from "../../assets/svg/Information";
 const Home = () => {
   const navigate = useNavigate();
 
-  document.addEventListener(
-    "touchmove",
-    function (event) {
-      event.preventDefault();
-    },
-    {
-      passive: false,
-    }
-  );
-
   return (
     <div className={`${styles.main} main`}>
       <div className={styles.title}>Список игр</div>
