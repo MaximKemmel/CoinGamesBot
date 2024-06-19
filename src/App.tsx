@@ -16,6 +16,16 @@ function App() {
     navigate(-1);
   });
 
+  document.addEventListener(
+    "touchmove",
+    function (event) {
+      event.preventDefault();
+    },
+    {
+      passive: false,
+    }
+  );
+
   useEffect(() => {
     telegram.ready();
     telegram.expand();

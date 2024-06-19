@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import styles from "./Home.module.sass";
@@ -10,20 +9,18 @@ import { IGame } from "../../types/game";
 import { Joystick as JoystickIcon } from "../../assets/svg/Joystick";
 import { Information as InfoIcon } from "../../assets/svg/Information";
 
-const telegram = window.Telegram.WebApp;
-
 const Home = () => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    telegram.onEvent("viewportChanged", testhandler);
-  }, []);
-
-  function testhandler(_object) {
-    if (!telegram.isExpanded) {
-      telegram.expand();
+  document.addEventListener(
+    "touchmove",
+    function (event) {
+      event.preventDefault();
+    },
+    {
+      passive: false,
     }
-  }
+  );
 
   return (
     <div className={`${styles.main} main`}>
