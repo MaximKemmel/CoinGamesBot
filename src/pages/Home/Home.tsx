@@ -12,10 +12,9 @@ import { Information as InfoIcon } from "../../assets/svg/Information";
 const Home = () => {
   const navigate = useNavigate();
 
-  const num = 9999;
+  const num = 1;
   const scrollable = document.getElementById("main");
 
-  // The preventCollapse function should be called when the scrollable content scrollTop is not equal to zero.
   function preventCollapse() {
     document.documentElement.style.marginTop = num + "px";
     document.documentElement.style.height = window.innerHeight + num + "px";
@@ -23,8 +22,6 @@ const Home = () => {
     window.scrollTo(0, num);
   }
 
-  // The allowCollapse function should be called when the scrollable content is finished being touched.
-  // Do not use this function if you want to lock the mini app completely on scroll.
   function allowCollapse() {
     document.documentElement.style.marginTop = "auto";
     document.documentElement.style.height = "auto";
