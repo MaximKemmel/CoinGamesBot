@@ -38,9 +38,9 @@ const Home = () => {
   });
 
   return (
-    <div className={styles.main} id="main">
+    <div className={styles.main}>
       <div className={styles.title}>Список игр</div>
-      <div className={styles.game_list}>
+      <div className={styles.game_list} id="main">
         {GameList.map((game: IGame, index: number) => (
           <div className={`${styles.game} ${index > 0 ? styles.bordered : ""}`}>
             <img src={game.icon} alt="" />
