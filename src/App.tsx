@@ -20,6 +20,7 @@ function App() {
     telegram.ready();
     telegram.expand();
     telegram.setHeaderColor("#353759");
+    telegram.onEvent("viewportChanged", testhandler);
   }, []);
 
   useEffect(() => {
@@ -30,6 +31,12 @@ function App() {
       telegram.BackButton.hide();
     }
   }, [pathname]);
+
+  function testhandler(object) {
+    if (!object.isExpanded) {
+      object.expand();
+    }
+  }
 
   return (
     <section>
