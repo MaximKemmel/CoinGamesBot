@@ -1,11 +1,25 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 import styles from "./HamsterKombat.module.sass";
+import "../../App.module.sass";
+
+import HamsterKombatIcon from "../../assets/hamster_kombat.jpg";
+import { Joystick as JoystickIcon } from "../../assets/svg/Joystick";
 
 const HamsterKombat = () => {
   const [selectedTab, setSelectedTab] = useState(0);
 
   return (
     <div className={styles.main}>
+      <img className={styles.game_icon} src={HamsterKombatIcon} alt="" />
+      <div className={styles.title}>Hamster Kombat</div>
+      <Link to={"https://t.me/hAmster_kombat_bot/start?startapp=kentId406006297"}>
+        <button className={styles.play}>
+          <JoystickIcon />
+          Играть
+        </button>
+      </Link>
       <div className={styles.tab_container}>
         <div className={styles.tabs_list}>
           <div className={`${styles.tab} ${selectedTab === 0 ? styles.active : ""}`} onClick={() => setSelectedTab(0)}>

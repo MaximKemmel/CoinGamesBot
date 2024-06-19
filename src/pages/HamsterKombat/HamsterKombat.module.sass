@@ -1,13 +1,54 @@
-$active_color: #A7CC48
+$active_color: #5DB434
+$play_button_hover: #5DB434AA
 $button_color: #FFFFFF20
 $card_color: #383957
+$text_color: #E9F4FF
 
 .main
-    .tab_container
+    display: flex
+    align-items: center
+    flex-direction: column
+    overflow-y: auto
+    padding: 15px
+    gap: 15px
+
+    .game_icon
+        width: 100px
+        height: 100px
+        filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.25))
+        border-radius: 50px
+
+    .title
+        font-size: 15px
+        text-align: center
+
+    button
+        background-color: $active_color
+        color: $text_color
         display: flex
-        padding: 10px
+        align-items: center
+        justify-content: center
+        gap: 10px
+        height: 35px
+        width: 140px
+        border: none
+        border-radius: 5px
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25)
+        transition: all .2s ease-out
+
+        &:active
+            background-color: $play_button_hover
+
+        svg
+            height: 23px
+            width: auto
+
+    .tab_container
+        margin-top: 10px
+        display: flex
         flex-direction: column
         gap: 15px
+        width: 100%
 
         .tabs_list
             display: flex

@@ -1,6 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 
 import styles from "./Home.module.sass";
+import "../../App.module.sass";
 
 import { GameList } from "../../data/gamesList";
 import { IGame } from "../../types/game";
