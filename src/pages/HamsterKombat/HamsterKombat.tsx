@@ -41,7 +41,7 @@ const HamsterKombat = () => {
               <SearchIcon />
               Новый шифр = <span>DAPP</span>
             </div>
-            <div className={styles.row}>
+            <div className={`${styles.row} ${styles.code}`}>
               <div className={styles.code_letter}>
                 D<span>-••</span>
               </div>
