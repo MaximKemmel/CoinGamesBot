@@ -17,6 +17,12 @@ function App() {
   });
 
   useEffect(() => {
+    telegram.ready();
+    telegram.expand();
+    telegram.setHeaderColor("#353759");
+  }, []);
+
+  useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
     if (pathname !== "/") {
       telegram.BackButton.show();

@@ -1,37 +1,44 @@
-$main_color: #2C2D3F
 $text_color: #E9F4FF
-$card_color: #383957
-$button_color: #FFFFFF20
-
-body
-    background: $main_color
-    color: $text_color
+$separator_color: #383957
+$active_color: #5DB434
+$info_button_hover: #E9F4FFAA
+$play_button_hover: #5DB434AA
 
 .main
+    display: flex
+    flex-direction: column
+    gap: 20px
+    padding: 15px
+
+    .title
+        font-weight: 500
+        font-size: 15px
+
     .game_list
         display: flex
         flex-direction: column
-        gap: 5px
-        padding: 10px
+        gap: 10px
+
+        .separator
+            height: 1px
+            width: 100%
+            background-color: $separator_color
 
         .game
             display: flex
             align-items: center
             gap: 10px
-            padding: 5px
-            background: $card_color
             border-radius: 8px
-            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25)
 
             .name
                 flex-grow: 1
-                font-size: 14px
 
             img
                 width: 40px
                 height: 40px
                 border-radius: 5px
                 flex-shrink: 0
+                filter: drop-shadow(3px 3px 4px rgba(0, 0, 0, 0.25))
 
             .buttons
                 display: flex
@@ -39,20 +46,33 @@ body
                 flex-shrink: 0
 
                 button
-                    background-color: $card_color
-                    height: 40px
-                    width: 40px
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    height: 30px
                     border: none
                     border-radius: 5px
-                    color: $text_color
+                    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25)
                     transition: all .2s ease-out
 
-                    &:active
-                        background-color: $button_color
+                    &.info
+                        width: 30px
+                        background-color: $text_color
 
-                    img
-                        height: auto
-                        width: 20px
+                        img
+                            height: 20px
+                            width: auto
 
-                        &.joystick
-                            width: 25px
+                        &:active
+                            background-color: $info_button_hover
+
+                    &.play
+                        width: 60px
+                        background-color: $active_color
+
+                        img
+                            height: 25px
+                            width: auto
+
+                        &:active
+                            background-color: $play_button_hover
