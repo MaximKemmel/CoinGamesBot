@@ -6,6 +6,7 @@ import "../../App.module.sass";
 
 import HamsterKombatIcon from "../../assets/hamster_kombat.jpg";
 import { Joystick as JoystickIcon } from "../../assets/svg/Joystick";
+import { Search as SearchIcon } from "../../assets/svg/Search";
 
 const HamsterKombat = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -35,7 +36,26 @@ const HamsterKombat = () => {
         <div className={styles.tabs_contents}>
           <div className={`${styles.content} ${selectedTab === 0 ? styles.active : ""}`}>5445</div>
           <div className={`${styles.content} ${selectedTab === 1 ? styles.active : ""}`}>654646</div>
-          <div className={`${styles.content} ${selectedTab === 2 ? styles.active : ""}`}>878</div>
+          <div className={`${styles.content} ${selectedTab === 2 ? styles.active : ""}`}>
+            <div className={styles.row}>
+              <SearchIcon />
+              Новый шифр = <span>DAPP</span>
+            </div>
+            <div className={styles.row}>
+              <div className={styles.code_letter}>
+                D<span>- • •</span>
+              </div>
+              <div className={styles.code_letter}>
+                A<span>• -</span>
+              </div>
+              <div className={styles.code_letter}>
+                P<span>• - - •</span>
+              </div>
+              <div className={styles.code_letter}>
+                P<span>• - - •</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
