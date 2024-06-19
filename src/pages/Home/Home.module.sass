@@ -8,6 +8,10 @@ $play_button_hover: #5DB434AA
     font-family: 'Montserrat', sans-serif
     font-size: 14px
 
+html, body
+    height: 100vh
+    overflow: hidden
+
 body
     background: linear-gradient(179.98deg, #353759, #15173E)
     color: $text_color
@@ -25,7 +29,7 @@ a
     padding: 15px
     padding-right: 0
     overflow-y: hidden
-    height: 100vh
+    height: calc(100vh - 30px)
 
     .title
         font-weight: 500
