@@ -127,10 +127,71 @@ a
                         align-items: start
                         flex-direction: column
 
+                    &.combo
+                        display: flex
+                        gap: 5px
+                        justify-content: space-around
+
+                        .card
+                            width: calc(100% / 3 - 5px)
+                            max-width: 150px
+                            max-height: 160px
+                            height: calc(100vw / 3 + 5px)
+                            display: flex
+                            flex-direction: column
+                            gap: 10px
+                            align-items: center
+                            justify-content: space-between
+                            background-color: $tab_color
+                            border-radius: 5px
+                            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25)
+                            padding: 15px
+
+                            img,
+                            svg
+                                height: 60%
+                                width: auto
+
+                            .name
+                                flex-grow: 1
+                                text-align: center
+                                word-wrap: break-word
+                                font-size: 11px
+                                display: flex
+                                align-items: center
+
                     &.code
                         gap: 5px
                         justify-content: center
                         margin: 5px 0
+
+                        .code_letter
+                            padding-top: 10px
+                            display: flex
+                            flex-direction: column
+                            justify-content: center
+                            align-content: center
+                            text-align: center
+                            height: 55px
+                            width: 55px
+                            font-size: 17px
+                            font-weight: 700
+                            border-radius: 5px
+                            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25)
+                            background-color: $tab_color
+                            position: relative
+
+                            span
+                                font-size: 22px
+                                margin-left: 0px
+                                letter-spacing: 0.1em
+
+                            .position
+                                font-size: 9px
+                                position: absolute
+                                top: 5px
+                                left: 5px
+                                font-weight: 400
 
                     svg
                         width: 25px
@@ -142,35 +203,11 @@ a
                         margin-left: -5px
                         margin-right: -5px
 
-                    .code_letter
-                        padding-top: 10px
-                        display: flex
-                        flex-direction: column
-                        justify-content: center
-                        align-content: center
-                        text-align: center
-                        height: 55px
-                        width: 55px
-                        font-size: 17px
-                        font-weight: 700
-                        border-radius: 5px
-                        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25)
-                        background-color: $tab_color
-                        position: relative
-
-                        span
-                            font-size: 22px
-                            margin-left: 0px
-                            letter-spacing: 0.1em
-
-                        .position
-                            font-size: 9px
-                            position: absolute
-                            top: 5px
-                            left: 5px
-                            font-weight: 400
-
                     &.code_description
                         span
                             font-size: 22px
                             letter-spacing: 0.1em
+
+                    &.combo_description
+                        span
+                            margin-left: 0
