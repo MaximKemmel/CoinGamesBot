@@ -15,13 +15,16 @@ $tab_color: #474871
 
 html, body
     height: 100vh
-    overflow: hidden
 
 body
     background: linear-gradient(179.98deg, #353759, #15173E)
     color: $text_color
     font-family: 'Montserrat', sans-serif
     font-size: 14px
+    position: fixed
+    bottom: 0
+    width: 100%
+    height: 100vh
 
 a
     text-decoration: none
@@ -31,9 +34,12 @@ a
     display: flex
     align-items: center
     flex-direction: column
-    overflow-y: auto
     padding: 15px
     gap: 15px
+    position: fixed
+    height: 100%
+    width: 100%
+    bottom: 0
 
     .game_icon
         width: 100px
@@ -73,6 +79,8 @@ a
         flex-direction: column
         gap: 15px
         width: 100%
+        flex-grow: 1
+        overflow: hidden
 
         .tabs_list
             display: flex
@@ -102,8 +110,8 @@ a
 
         .tabs_contents
             width: 100%
-            flex-grow: 1
             display: flex
+            overflow-y: auto
 
             .content
                 width: 100%

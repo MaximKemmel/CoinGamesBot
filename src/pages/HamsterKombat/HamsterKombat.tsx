@@ -16,6 +16,31 @@ import VillaForTheDEVTeamIcon from "../../assets/hamster_kombat/villa_for_dev_te
 const HamsterKombat = () => {
   const [selectedTab, setSelectedTab] = useState(1);
 
+  const num = 1;
+  const scrollable = document.getElementById("main");
+
+  function preventCollapse() {
+    document.documentElement.style.marginTop = num + "px";
+    document.documentElement.style.height = window.innerHeight + num + "px";
+    document.documentElement.style.overflow = "hidden";
+    window.scrollTo(0, num);
+  }
+
+  function allowCollapse() {
+    document.documentElement.style.marginTop = "auto";
+    document.documentElement.style.height = "auto";
+    document.documentElement.style.overflow = "auto";
+  }
+
+  document.body.addEventListener("touchstart", function () {
+    if (scrollable?.scrollTop !== 0) {
+      preventCollapse();
+    }
+  });
+  scrollable?.addEventListener("touchend", function () {
+    allowCollapse();
+  });
+
   return (
     <div className={styles.main}>
       <img className={styles.game_icon} src={HamsterKombatIcon} alt="" />
@@ -35,7 +60,7 @@ const HamsterKombat = () => {
             Шифр
           </div>
         </div>
-        <div className={styles.tabs_contents}>
+        <div className={styles.tabs_contents} id="main">
           <div className={`${styles.content} ${selectedTab === 1 ? styles.active : ""}`}>
             <div className={styles.row}>
               <SearchIcon />
