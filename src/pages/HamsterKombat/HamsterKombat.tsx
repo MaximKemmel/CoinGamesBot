@@ -14,7 +14,7 @@ import P2PTradingIcon from "../../assets/hamster_kombat/p2p_trading.png";
 import VillaForTheDEVTeamIcon from "../../assets/hamster_kombat/villa_for_dev_team.png";
 
 const HamsterKombat = () => {
-  const [selectedTab, setSelectedTab] = useState(0);
+  const [selectedTab, setSelectedTab] = useState(1);
 
   return (
     <div className={styles.main}>
@@ -28,9 +28,6 @@ const HamsterKombat = () => {
       </Link>
       <div className={styles.tab_container}>
         <div className={styles.tabs_list}>
-          <div className={`${styles.tab} ${selectedTab === 0 ? styles.active : ""}`} onClick={() => setSelectedTab(0)}>
-            О проекте
-          </div>
           <div className={`${styles.tab} ${selectedTab === 1 ? styles.active : ""}`} onClick={() => setSelectedTab(1)}>
             Комбо
           </div>
@@ -39,7 +36,6 @@ const HamsterKombat = () => {
           </div>
         </div>
         <div className={styles.tabs_contents}>
-          <div className={`${styles.content} ${selectedTab === 0 ? styles.active : ""}`}>5445</div>
           <div className={`${styles.content} ${selectedTab === 1 ? styles.active : ""}`}>
             <div className={styles.row}>
               <SearchIcon />
