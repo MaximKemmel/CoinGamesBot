@@ -12,9 +12,9 @@ import { Joystick as JoystickIcon } from "../../assets/svg/Joystick";
 import { Search as SearchIcon } from "../../assets/svg/Search";
 import { Wallet as WalletIcon } from "../../assets/svg/Wallet";
 
-import GameFiIcon from "../../assets/hamster_kombat/gamefi_tokens.svg";
-import P2PTradingIcon from "../../assets/hamster_kombat/p2p_trading.png";
-import VillaForTheDEVTeamIcon from "../../assets/hamster_kombat/villa_for_dev_team.png";
+import GameFiIcon from "../../assets/hamster_kombat/hamster_youtube_gold_button.png";
+import P2PTradingIcon from "../../assets/hamster_kombat/staking.svg";
+import VillaForTheDEVTeamIcon from "../../assets/hamster_kombat/licence_bangladesh.png";
 
 const HamsterKombat = () => {
   const [selectedTab, setSelectedTab] = useState(1);
@@ -68,32 +68,32 @@ const HamsterKombat = () => {
           <div className={`${styles.content} ${selectedTab === 1 ? styles.active : ""}`}>
             <div className={styles.row}>
               <SearchIcon />
-              Комбо-карточки (20-21 июня):
+              Комбо-карточки (21-22 июня):
             </div>
             <div className={`${styles.row} ${styles.combo}`}>
               <div className={styles.card}>
                 <img src={GameFiIcon} alt="" />
-                <div className={styles.name}>GameFi tokens</div>
+                <div className={styles.name}>YouTube Gold Button</div>
               </div>
               <div className={styles.card}>
                 <img src={P2PTradingIcon} alt="" />
-                <div className={styles.name}>P2P trading</div>
+                <div className={styles.name}>Staking</div>
               </div>
               <div className={styles.card}>
                 <img src={VillaForTheDEVTeamIcon} alt="" />
-                <div className={styles.name}>Villa for the DEV team</div>
+                <div className={styles.name}>Licence Bangladesh</div>
               </div>
             </div>
             <div className={`${styles.row} ${styles.vertical}`}>
               Где найти карточки:
               <div className={`${styles.row} ${styles.combo_description}`}>
-                <span>GameFi tokens</span> - Markets
+                <span>YouTube Gold Button</span> - Specials
               </div>
               <div className={`${styles.row} ${styles.combo_description}`}>
-                <span>P2P trading</span> - Markets
+                <span>Staking</span> - Markets
               </div>
               <div className={`${styles.row} ${styles.combo_description}`}>
-                <span>Villa for the DEV team</span> - Specials
+                <span>Licence Bangladesh</span> - Legal
               </div>
             </div>
             <div className={styles.row}>
