@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import styles from "./HamsterKombat.module.sass";
 import "../../App.module.sass";
 
+import { HamsterKombatCodeLettersList } from "../../data/hamserKombatCodeLettersList";
+import { IHamsterKombatCodeLetter } from "../../types/hamsterKombatCodeLetter";
+
 import HamsterKombatIcon from "../../assets/hamster_kombat.jpg";
 import { Joystick as JoystickIcon } from "../../assets/svg/Joystick";
 import { Search as SearchIcon } from "../../assets/svg/Search";
@@ -15,6 +18,7 @@ import VillaForTheDEVTeamIcon from "../../assets/hamster_kombat/villa_for_dev_te
 
 const HamsterKombat = () => {
   const [selectedTab, setSelectedTab] = useState(1);
+  const currentCode = "FARM";
 
   const num = 1;
   const scrollable = document.getElementById("main");
@@ -42,7 +46,7 @@ const HamsterKombat = () => {
   });
 
   return (
-    <div className={styles.main}>
+    <div className={styles.main} id="main">
       <img className={styles.game_icon} src={HamsterKombatIcon} alt="" />
       <div className={styles.title}>Hamster Kombat</div>
       <Link to={"https://t.me/hAmster_kombat_bot/start?startapp=kentId406006297"}>
@@ -60,7 +64,7 @@ const HamsterKombat = () => {
             Шифр
           </div>
         </div>
-        <div className={styles.tabs_contents} id="main">
+        <div className={styles.tabs_contents}>
           <div className={`${styles.content} ${selectedTab === 1 ? styles.active : ""}`}>
             <div className={styles.row}>
               <SearchIcon />
@@ -100,21 +104,18 @@ const HamsterKombat = () => {
           <div className={`${styles.content} ${selectedTab === 2 ? styles.active : ""}`}>
             <div className={styles.row}>
               <SearchIcon />
-              Шифр (20-21 июня) = <span>PUMP</span>
+              Шифр (21-22 июня) = <span>{currentCode}</span>
             </div>
             <div className={`${styles.row} ${styles.code}`}>
-              <div className={styles.code_letter}>
-                <div className={styles.position}>1</div>P<span>•--•</span>
-              </div>
-              <div className={styles.code_letter}>
-                <div className={styles.position}>2</div>U<span>••-</span>
-              </div>
-              <div className={styles.code_letter}>
-                <div className={styles.position}>3</div>M<span>--</span>
-              </div>
-              <div className={styles.code_letter}>
-                <div className={styles.position}>4</div>P<span>•--•</span>
-              </div>
+              {currentCode.split("").map((symbol: string, index: number) => (
+                <div className={styles.code_letter}>
+                  <div className={styles.position}>{index + 1}</div>
+                  {symbol}
+                  <span>
+                    {HamsterKombatCodeLettersList.find((letter: IHamsterKombatCodeLetter) => letter.symbol === symbol)!.code}
+                  </span>
+                </div>
+              ))}
             </div>
             <div className={`${styles.row} ${styles.vertical}`}>
               <div className={styles.row}>Чтобы активировать режим, нажмите на "Прибыль за тап" быстро 3 раза</div>

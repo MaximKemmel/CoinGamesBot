@@ -36,10 +36,8 @@ a
     flex-direction: column
     padding: 15px
     gap: 15px
-    position: fixed
-    height: 100%
-    width: 100%
-    bottom: 0
+    overflow-y: auto
+    height: 100vh
 
     .game_icon
         width: 100px
@@ -80,7 +78,6 @@ a
         gap: 15px
         width: 100%
         flex-grow: 1
-        overflow: hidden
 
         .tabs_list
             display: flex
@@ -111,7 +108,6 @@ a
         .tabs_contents
             width: 100%
             display: flex
-            overflow-y: auto
 
             .content
                 width: 100%
