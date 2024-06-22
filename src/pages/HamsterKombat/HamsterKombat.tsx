@@ -6,15 +6,13 @@ import "../../App.module.sass";
 
 import { HamsterKombatCodeLettersList } from "../../data/hamserKombatCodeLettersList";
 import { IHamsterKombatCodeLetter } from "../../types/hamsterKombatCodeLetter";
+import { HamsterKombatCardsList } from "../../data/hamsterKombatCardsList";
+import { IHamsterKombatCard } from "../../types/hamsterKombatCard";
 
 import HamsterKombatIcon from "../../assets/hamster_kombat.jpg";
 import { Joystick as JoystickIcon } from "../../assets/svg/Joystick";
 import { Search as SearchIcon } from "../../assets/svg/Search";
 import { Wallet as WalletIcon } from "../../assets/svg/Wallet";
-
-import GameFiIcon from "../../assets/hamster_kombat/hamster_youtube_gold_button.png";
-import P2PTradingIcon from "../../assets/hamster_kombat/staking.svg";
-import VillaForTheDEVTeamIcon from "../../assets/hamster_kombat/licence_bangladesh.png";
 
 const HamsterKombat = () => {
   const [selectedTab, setSelectedTab] = useState(1);
@@ -68,33 +66,23 @@ const HamsterKombat = () => {
           <div className={`${styles.content} ${selectedTab === 1 ? styles.active : ""}`}>
             <div className={styles.row}>
               <SearchIcon />
-              Комбо-карточки (21-22 июня):
+              Комбо-карточки (22-23 июня):
             </div>
             <div className={`${styles.row} ${styles.combo}`}>
-              <div className={styles.card}>
-                <img src={GameFiIcon} alt="" />
-                <div className={styles.name}>YouTube Gold Button</div>
-              </div>
-              <div className={styles.card}>
-                <img src={P2PTradingIcon} alt="" />
-                <div className={styles.name}>Staking</div>
-              </div>
-              <div className={styles.card}>
-                <img src={VillaForTheDEVTeamIcon} alt="" />
-                <div className={styles.name}>Licence Bangladesh</div>
-              </div>
+              {HamsterKombatCardsList.filter((card: IHamsterKombatCard) => card.isActive).map((card: IHamsterKombatCard) => (
+                <div className={styles.card}>
+                  <img src={card.icon} alt="" />
+                  <div className={styles.name}>{card.name}</div>
+                </div>
+              ))}
             </div>
             <div className={`${styles.row} ${styles.vertical}`}>
               Где найти карточки:
-              <div className={`${styles.row} ${styles.combo_description}`}>
-                <span>YouTube Gold Button</span> - Specials
-              </div>
-              <div className={`${styles.row} ${styles.combo_description}`}>
-                <span>Staking</span> - Markets
-              </div>
-              <div className={`${styles.row} ${styles.combo_description}`}>
-                <span>Licence Bangladesh</span> - Legal
-              </div>
+              {HamsterKombatCardsList.filter((card: IHamsterKombatCard) => card.isActive).map((card: IHamsterKombatCard) => (
+                <div className={`${styles.row} ${styles.combo_description}`}>
+                  <span>{card.name}</span> - {card.group}
+                </div>
+              ))}
             </div>
             <div className={styles.row}>
               <WalletIcon />
