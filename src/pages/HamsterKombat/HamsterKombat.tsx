@@ -16,7 +16,7 @@ import { Wallet as WalletIcon } from "../../assets/svg/Wallet";
 
 const HamsterKombat = () => {
   const [selectedTab, setSelectedTab] = useState(1);
-  const currentCode = "FARM";
+  const currentCode = "POOL";
 
   const num = 1;
   const scrollable = document.getElementById("main");
@@ -92,7 +92,7 @@ const HamsterKombat = () => {
           <div className={`${styles.content} ${selectedTab === 2 ? styles.active : ""}`}>
             <div className={styles.row}>
               <SearchIcon />
-              Шифр (21-22 июня) = <span>{currentCode}</span>
+              Шифр (22-23 июня) = <span>{currentCode}</span>
             </div>
             <div className={`${styles.row} ${styles.code}`}>
               {currentCode.split("").map((symbol: string, index: number) => (
